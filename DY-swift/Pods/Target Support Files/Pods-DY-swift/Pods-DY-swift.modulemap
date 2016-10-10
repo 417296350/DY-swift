@@ -1,0 +1,6 @@
+framework module Pods_DY_swift {
+  umbrella header "Pods-DY-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
