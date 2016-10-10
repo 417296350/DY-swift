@@ -164,8 +164,6 @@ extension PageTitleView{
     /// 根据传入的新、旧Label点击索引，来识别这个两个Label，且相应的改变两个LabelUI状态
     fileprivate func changeLabelState(_ newDidIndex:NSInteger,oldIndex:NSInteger,progress:CGFloat = 1.0){
         
-        print(progress)
-        
 
         for (index,label) in labels.enumerated(){
             
@@ -206,13 +204,14 @@ extension PageTitleView{
     // 根据progress修改滚动条的位置
     fileprivate func changeBottomScrollLineFrame(_ progress:CGFloat,newIndex: NSInteger, oldIndex: NSInteger){
         
-        // 0. 获取新、旧label
-        let oldLabel = labels[oldIndex]
-        let newLabel = labels[oldIndex]
-        // 1. 计算滚动条滚动位置
-        let startPostionX = oldLabel.frame.origin.x
-        let detalMove = pageBottomScrollLine.frame.size.width * progress
-        pageBottomScrollLine.frame.origin.x = startPostionX + detalMove
+        // 1.取出sourceLabel/targetLabel
+        let sourceLabel = labels[oldIndex]
+        let targetLabel = labels[newIndex]
+        
+        // 2.处理滑块的逻辑
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        pageBottomScrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
     }
 }
 
@@ -251,10 +250,14 @@ extension PageTitleView{
 // MARK: 对外的公共方法
 extension PageTitleView{
 
+    /// 切换titleView标题调用的方法
     func switchTitleView(_ oldIndex:NSInteger,newIndex:NSInteger,progress:CGFloat){
         
         // 1. 切换新、旧按钮
-        changeLabelState(newIndex, oldIndex: oldIndex,progress: progress)
+        if abs(progress) > 0.5 {
+            changeLabelState(newIndex, oldIndex: oldIndex,progress: progress)
+        }
+        
         
         // 2. 移动底部工具条
         changeBottomScrollLineFrame(progress,newIndex: newIndex, oldIndex: oldIndex)

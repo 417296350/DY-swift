@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RmdGameCellIdentifer" id="gTV-IL-0wX" customClass="RmdGameCell" customModule="DY_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PM-Sk-ZJQ">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="zeR-YM-mnE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_more_btn" translatesAutoresizingMaskIntoConstraints="NO" id="XR6-cI-Gfo">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XR6-cI-Gfo" secondAttribute="height" multiplier="1:1" id="KSZ-G0-Sq0"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="XR6-cI-Gfo" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="51E-YP-4WE"/>
+                <constraint firstItem="1PM-Sk-ZJQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GMb-O2-x5U"/>
+                <constraint firstItem="1PM-Sk-ZJQ" firstAttribute="top" secondItem="XR6-cI-Gfo" secondAttribute="bottom" constant="5" id="HPa-KY-bWc"/>
+                <constraint firstAttribute="bottom" secondItem="1PM-Sk-ZJQ" secondAttribute="bottom" id="NYs-Ld-uwE"/>
+                <constraint firstAttribute="trailing" secondItem="1PM-Sk-ZJQ" secondAttribute="trailing" id="QZC-WS-eWR"/>
+                <constraint firstItem="XR6-cI-Gfo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="aYe-zA-El4"/>
+            </constraints>
+            <size key="customSize" width="96" height="64"/>
+            <connections>
+                <outlet property="imageView" destination="XR6-cI-Gfo" id="G7v-wK-4xQ"/>
+                <outlet property="titelLabel" destination="1PM-Sk-ZJQ" id="Ijo-ag-SzU"/>
+            </connections>
+            <point key="canvasLocation" x="56.5" y="60.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_more_btn" width="44" height="44"/>
+    </resources>
+</document>

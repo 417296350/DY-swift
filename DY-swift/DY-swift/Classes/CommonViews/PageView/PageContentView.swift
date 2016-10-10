@@ -167,36 +167,33 @@ extension PageContentView:UICollectionViewDelegate{
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
+        // 0.判断是否是点击事件
+        if isAllowDodelegate == false { return }
+    
+        // 如果是按钮点击，不应该进入这个里的滚动
+        if isAllowDodelegate == false { return }
+        
         // 0. 获取滚动过程中的偏移量
         let scrollingOffX = scrollView.contentOffset.x
         
         // 1. 计算滚动偏移量距滚动前内容所处在偏移量的差：scrollingOffX - currentOffX
-        var detalOffX = scrollingOffX - currentOffX
+        let detalOffX = scrollingOffX - currentOffX
         
         // 2. 获取每次滚动一页的最大距离(默认就scrollView的宽度)
-        var scrollMaxW = scrollView.frame.size.width
+        let scrollMaxW = scrollView.frame.size.width
         
         // 3. 向右滚动
         if detalOffX < 0 {
             
-            // 3.0 判断如果滚动的距离差绝对值超过滚动一页的最大距离，就修正为最大距离(防止bug)
-//            print(abs(detalOffX),scrollMaxW)
-            if abs(detalOffX) > scrollMaxW {
-                print("滚动的惯性超出了右,修正")
-                let detalError = abs(detalOffX) - scrollMaxW
-//                detalOffX = -scrollMaxW
-                scrollMaxW = scrollMaxW - detalError
-            }
+            // 1.计算progress
+            progress = 1 - (scrollingOffX / scrollMaxW - floor(scrollingOffX / scrollMaxW))
             
-            // 3.1 计算滚动距离比例值progress (为了给标题工具View中的底部滚动条使用)
-            progress = detalOffX / scrollMaxW
+            // 2.计算targetIndex
+            newScrollIndex = Int(scrollingOffX / scrollMaxW)
             
-            // 3.2 计算此时滚动距离应该对应的索引index（为了给标题工具View确定label状态）
-            newScrollIndex = Int(scrollingOffX/scrollMaxW)
-            
-            // 3.3 计算滚动之前的界面所在的索引index
+            // 3.计算sourceIndex
             oldScrollIndex = newScrollIndex + 1
-            if  oldScrollIndex > childVCs.count {
+            if oldScrollIndex >= childVCs.count {
                 oldScrollIndex = childVCs.count - 1
             }
             
@@ -207,29 +204,22 @@ extension PageContentView:UICollectionViewDelegate{
         // 4. 向左滚动
         if detalOffX > 0 {
             
+            // 1.计算progress
+            progress = scrollingOffX / scrollMaxW - floor(scrollingOffX / scrollMaxW)
             
-            // 4.0 判断如果滚动的距离差绝对值超过滚动一页的最大距离，就修正为最大距离(防止bug)
-            if abs(detalOffX) > scrollMaxW {
-                print("滚动的惯性超出了左,修正")
-                detalOffX = scrollMaxW
-            }
+            // 2.计算sourceIndex
+            oldScrollIndex = Int(scrollingOffX / scrollMaxW)
             
-            // 4.1 计算滚动距离比例值progress (为了给标题工具View中的底部滚动条使用)
-            progress = detalOffX / scrollMaxW
-            
-            // 4.2 计算滚动之前的界面所在的索引index
-            oldScrollIndex = Int(scrollingOffX/scrollMaxW)
-            
-            // 4.3 计算此时滚动距离应该对应的索引index（为了给标题工具View确定label状态）
+            // 3.计算targetIndex
             newScrollIndex = oldScrollIndex + 1
-            if  newScrollIndex >= childVCs.count {
-                oldScrollIndex = childVCs.count - 1
+            if newScrollIndex >= childVCs.count {
+                newScrollIndex = childVCs.count - 1
             }
-           
-            // 4.4 判断滚动结束(其实是这个界面滚动结束)后，需要再次把新、旧索进行计算
-            if detalOffX == pageCollectionView.frame.size.width {
+            
+            // 4.如果完全划过去
+            if scrollingOffX - currentOffX == scrollMaxW {
+                progress = 1
                 newScrollIndex = oldScrollIndex
-                oldScrollIndex = newScrollIndex-1
             }
                 
         }
