@@ -143,7 +143,7 @@ extension PageContentView:UICollectionViewDataSource{
         }
         
         // 3. 设置Cell内容
-        childVCs[indexPath.row].view.backgroundColor = UIColor.randomColor()
+//        childVCs[indexPath.row].view.backgroundColor = UIColor.randomColor()
         cell.contentView.addSubview(childVCs[indexPath.row].view)
         
         // 4. 返回Cell
@@ -221,7 +221,7 @@ extension PageContentView:UICollectionViewDelegate{
                 progress = 1
                 newScrollIndex = oldScrollIndex
             }
-                
+            
         }
         
         // 4. 代理通知

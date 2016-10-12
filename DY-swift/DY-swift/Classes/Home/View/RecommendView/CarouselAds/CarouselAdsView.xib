@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CarouselAdsView" customModule="DY_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="iLo-4q-co4">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4L5-FY-jLe">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="69O-vq-oPF"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="aer-5s-U5a"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PMm-wq-Pss">
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.4683847545" blue="0.074441726759999993" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.4683847545" blue="0.074441726759999993" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iLo-4q-co4" secondAttribute="trailing" id="1sA-EV-2xd"/>
+                <constraint firstItem="iLo-4q-co4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4Kq-jL-DjP"/>
+                <constraint firstItem="iLo-4q-co4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kRZ-tx-3zq"/>
+                <constraint firstAttribute="bottom" secondItem="PMm-wq-Pss" secondAttribute="bottom" id="ohU-We-Rw7"/>
+                <constraint firstAttribute="trailing" secondItem="PMm-wq-Pss" secondAttribute="trailing" constant="15" id="uxs-KL-Ten"/>
+                <constraint firstAttribute="bottom" secondItem="iLo-4q-co4" secondAttribute="bottom" id="zUb-HA-r16"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="crsAdsCollectionView" destination="iLo-4q-co4" id="9ej-nR-TW6"/>
+                <outlet property="crsAdsPageControl" destination="PMm-wq-Pss" id="aZ3-Go-xPB"/>
+                <outlet property="layout" destination="4L5-FY-jLe" id="I9a-MN-gXQ"/>
+            </connections>
+            <point key="canvasLocation" x="-56" y="-626"/>
+        </view>
+    </objects>
+</document>

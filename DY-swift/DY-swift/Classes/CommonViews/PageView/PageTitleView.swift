@@ -212,6 +212,7 @@ extension PageTitleView{
         let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
         let moveX = moveTotalX * progress
         pageBottomScrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
     }
 }
 
@@ -257,7 +258,6 @@ extension PageTitleView{
         if abs(progress) > 0.5 {
             changeLabelState(newIndex, oldIndex: oldIndex,progress: progress)
         }
-        
         
         // 2. 移动底部工具条
         changeBottomScrollLineFrame(progress,newIndex: newIndex, oldIndex: oldIndex)

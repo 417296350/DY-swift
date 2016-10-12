@@ -7,18 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023315D01DAE3F9E0023E8BF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315CF1DAE3F9E0023E8BF /* GameViewController.swift */; };
+		023315E61DAE45F70023E8BF /* CarouselAdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315D41DAE45F70023E8BF /* CarouselAdsView.swift */; };
+		023315E71DAE45F70023E8BF /* CarouselAdsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023315D51DAE45F70023E8BF /* CarouselAdsView.xib */; };
+		023315E81DAE45F70023E8BF /* CrsAdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315D61DAE45F70023E8BF /* CrsAdsCell.swift */; };
+		023315E91DAE45F70023E8BF /* CrsAdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023315D71DAE45F70023E8BF /* CrsAdsCell.xib */; };
+		023315EA1DAE45F70023E8BF /* RecommedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315D91DAE45F70023E8BF /* RecommedHeaderView.swift */; };
+		023315EB1DAE45F70023E8BF /* RecommedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023315DA1DAE45F70023E8BF /* RecommedHeaderView.xib */; };
+		023315EC1DAE45F70023E8BF /* RecommedBaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315DC1DAE45F70023E8BF /* RecommedBaseViewCell.swift */; };
+		023315ED1DAE45F70023E8BF /* RecommedNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315DD1DAE45F70023E8BF /* RecommedNormalCell.swift */; };
+		023315EE1DAE45F70023E8BF /* RecommedNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023315DE1DAE45F70023E8BF /* RecommedNormalCell.xib */; };
+		023315EF1DAE45F70023E8BF /* RecommedPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315DF1DAE45F70023E8BF /* RecommedPrettyCell.swift */; };
+		023315F01DAE45F70023E8BF /* RecommedPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023315E01DAE45F70023E8BF /* RecommedPrettyCell.xib */; };
+		023315F11DAE45F70023E8BF /* RmdGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315E21DAE45F70023E8BF /* RmdGameCell.swift */; };
+		023315F21DAE45F70023E8BF /* RmdGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023315E31DAE45F70023E8BF /* RmdGameCell.xib */; };
+		023315F31DAE45F70023E8BF /* RmdGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315E41DAE45F70023E8BF /* RmdGameView.swift */; };
+		023315F41DAE45F70023E8BF /* RmdGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023315E51DAE45F70023E8BF /* RmdGameView.xib */; };
+		023315F71DAE461D0023E8BF /* GameCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315F51DAE461D0023E8BF /* GameCollectionCell.swift */; };
+		023315F81DAE461D0023E8BF /* GameCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023315F61DAE461D0023E8BF /* GameCollectionCell.xib */; };
+		023315FB1DAE47D80023E8BF /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315FA1DAE47D80023E8BF /* GameMode.swift */; };
+		023315FD1DAE4A0A0023E8BF /* GameViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023315FC1DAE4A0A0023E8BF /* GameViewMode.swift */; };
 		0236644D1DA77D3400CEA6EC /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0236644C1DA77D3400CEA6EC /* NetWorkTools.swift */; };
-		0257EC131DAA27380050D541 /* RecommedNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257EC0C1DAA27380050D541 /* RecommedNormalCell.swift */; };
-		0257EC141DAA27380050D541 /* RecommedNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0257EC0D1DAA27380050D541 /* RecommedNormalCell.xib */; };
-		0257EC151DAA27380050D541 /* RecommedPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257EC0E1DAA27380050D541 /* RecommedPrettyCell.swift */; };
-		0257EC161DAA27380050D541 /* RecommedPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0257EC0F1DAA27380050D541 /* RecommedPrettyCell.xib */; };
-		0257EC171DAA27380050D541 /* RecommedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257EC111DAA27380050D541 /* RecommedHeaderView.swift */; };
-		0257EC181DAA27380050D541 /* RecommedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0257EC121DAA27380050D541 /* RecommedHeaderView.xib */; };
-		0257EC1A1DAA34850050D541 /* RecommedBaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257EC191DAA34850050D541 /* RecommedBaseViewCell.swift */; };
-		0257EC1E1DAA40120050D541 /* CarouselAdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257EC1D1DAA40120050D541 /* CarouselAdsView.swift */; };
-		0257EC201DAA40270050D541 /* CarouselAdsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0257EC1F1DAA40270050D541 /* CarouselAdsView.xib */; };
-		0257EC241DAA47CE0050D541 /* CrsAdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257EC231DAA47CE0050D541 /* CrsAdsCell.swift */; };
-		0257EC261DAA47DC0050D541 /* CrsAdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0257EC251DAA47DC0050D541 /* CrsAdsCell.xib */; };
 		0257EC2D1DAA4F360050D541 /* CsrAdsMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257EC2A1DAA4F360050D541 /* CsrAdsMode.swift */; };
 		0257EC2E1DAA4F360050D541 /* RecommedGroupMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257EC2B1DAA4F360050D541 /* RecommedGroupMode.swift */; };
 		0257EC2F1DAA4F360050D541 /* RecommedItemMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257EC2C1DAA4F360050D541 /* RecommedItemMode.swift */; };
@@ -40,27 +49,32 @@
 		02C7BD7A1DA64B9F003D2350 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7BD661DA64B9F003D2350 /* UIBarButtonItem+Extension.swift */; };
 		02C7BD7B1DA64B9F003D2350 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7BD671DA64B9F003D2350 /* UIColor+Extension.swift */; };
 		02C93AB41DA7B5C8006B8873 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C93AB31DA7B5C8006B8873 /* NSDate+Extension.swift */; };
-		02FEA0581DAA5FA600D33EF7 /* RmdGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FEA0571DAA5FA600D33EF7 /* RmdGameView.swift */; };
-		02FEA05C1DAA5FCD00D33EF7 /* RmdGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FEA05B1DAA5FCD00D33EF7 /* RmdGameView.xib */; };
-		02FEA05F1DAA64F500D33EF7 /* RmdGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FEA05D1DAA64F500D33EF7 /* RmdGameCell.swift */; };
-		02FEA0601DAA64F500D33EF7 /* RmdGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FEA05E1DAA64F500D33EF7 /* RmdGameCell.xib */; };
 		DDEB77A346DB644537D1CF26 /* Pods_DY_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F64623072B627A795BEC37 /* Pods_DY_swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		023315CF1DAE3F9E0023E8BF /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		023315D41DAE45F70023E8BF /* CarouselAdsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselAdsView.swift; sourceTree = "<group>"; };
+		023315D51DAE45F70023E8BF /* CarouselAdsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselAdsView.xib; sourceTree = "<group>"; };
+		023315D61DAE45F70023E8BF /* CrsAdsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrsAdsCell.swift; sourceTree = "<group>"; };
+		023315D71DAE45F70023E8BF /* CrsAdsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrsAdsCell.xib; sourceTree = "<group>"; };
+		023315D91DAE45F70023E8BF /* RecommedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedHeaderView.swift; sourceTree = "<group>"; };
+		023315DA1DAE45F70023E8BF /* RecommedHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommedHeaderView.xib; sourceTree = "<group>"; };
+		023315DC1DAE45F70023E8BF /* RecommedBaseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedBaseViewCell.swift; sourceTree = "<group>"; };
+		023315DD1DAE45F70023E8BF /* RecommedNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedNormalCell.swift; sourceTree = "<group>"; };
+		023315DE1DAE45F70023E8BF /* RecommedNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommedNormalCell.xib; sourceTree = "<group>"; };
+		023315DF1DAE45F70023E8BF /* RecommedPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedPrettyCell.swift; sourceTree = "<group>"; };
+		023315E01DAE45F70023E8BF /* RecommedPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommedPrettyCell.xib; sourceTree = "<group>"; };
+		023315E21DAE45F70023E8BF /* RmdGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RmdGameCell.swift; sourceTree = "<group>"; };
+		023315E31DAE45F70023E8BF /* RmdGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RmdGameCell.xib; sourceTree = "<group>"; };
+		023315E41DAE45F70023E8BF /* RmdGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RmdGameView.swift; sourceTree = "<group>"; };
+		023315E51DAE45F70023E8BF /* RmdGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RmdGameView.xib; sourceTree = "<group>"; };
+		023315F51DAE461D0023E8BF /* GameCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionCell.swift; sourceTree = "<group>"; };
+		023315F61DAE461D0023E8BF /* GameCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCollectionCell.xib; sourceTree = "<group>"; };
+		023315FA1DAE47D80023E8BF /* GameMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		023315FC1DAE4A0A0023E8BF /* GameViewMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewMode.swift; sourceTree = "<group>"; };
 		0236644C1DA77D3400CEA6EC /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 		024DEF907E07CE827810FF59 /* Pods-DY-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DY-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DY-swift/Pods-DY-swift.debug.xcconfig"; sourceTree = "<group>"; };
-		0257EC0C1DAA27380050D541 /* RecommedNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedNormalCell.swift; sourceTree = "<group>"; };
-		0257EC0D1DAA27380050D541 /* RecommedNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommedNormalCell.xib; sourceTree = "<group>"; };
-		0257EC0E1DAA27380050D541 /* RecommedPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedPrettyCell.swift; sourceTree = "<group>"; };
-		0257EC0F1DAA27380050D541 /* RecommedPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommedPrettyCell.xib; sourceTree = "<group>"; };
-		0257EC111DAA27380050D541 /* RecommedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedHeaderView.swift; sourceTree = "<group>"; };
-		0257EC121DAA27380050D541 /* RecommedHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommedHeaderView.xib; sourceTree = "<group>"; };
-		0257EC191DAA34850050D541 /* RecommedBaseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedBaseViewCell.swift; sourceTree = "<group>"; };
-		0257EC1D1DAA40120050D541 /* CarouselAdsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselAdsView.swift; sourceTree = "<group>"; };
-		0257EC1F1DAA40270050D541 /* CarouselAdsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselAdsView.xib; sourceTree = "<group>"; };
-		0257EC231DAA47CE0050D541 /* CrsAdsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrsAdsCell.swift; sourceTree = "<group>"; };
-		0257EC251DAA47DC0050D541 /* CrsAdsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrsAdsCell.xib; sourceTree = "<group>"; };
 		0257EC2A1DAA4F360050D541 /* CsrAdsMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CsrAdsMode.swift; sourceTree = "<group>"; };
 		0257EC2B1DAA4F360050D541 /* RecommedGroupMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedGroupMode.swift; sourceTree = "<group>"; };
 		0257EC2C1DAA4F360050D541 /* RecommedItemMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommedItemMode.swift; sourceTree = "<group>"; };
@@ -84,10 +98,6 @@
 		02C7BD661DA64B9F003D2350 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		02C7BD671DA64B9F003D2350 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		02C93AB31DA7B5C8006B8873 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
-		02FEA0571DAA5FA600D33EF7 /* RmdGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RmdGameView.swift; sourceTree = "<group>"; };
-		02FEA05B1DAA5FCD00D33EF7 /* RmdGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RmdGameView.xib; sourceTree = "<group>"; };
-		02FEA05D1DAA64F500D33EF7 /* RmdGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RmdGameCell.swift; sourceTree = "<group>"; };
-		02FEA05E1DAA64F500D33EF7 /* RmdGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RmdGameCell.xib; sourceTree = "<group>"; };
 		84F64623072B627A795BEC37 /* Pods_DY_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DY_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7425A2710411FEAFBFA96D /* Pods-DY-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DY-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DY-swift/Pods-DY-swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +114,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023315D11DAE45F70023E8BF /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				023315F51DAE461D0023E8BF /* GameCollectionCell.swift */,
+				023315F61DAE461D0023E8BF /* GameCollectionCell.xib */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		023315D21DAE45F70023E8BF /* RecommendView */ = {
+			isa = PBXGroup;
+			children = (
+				023315D31DAE45F70023E8BF /* CarouselAds */,
+				023315D81DAE45F70023E8BF /* HeaderView */,
+				023315DB1DAE45F70023E8BF /* ItemCell */,
+				023315E11DAE45F70023E8BF /* RmdGameView */,
+			);
+			path = RecommendView;
+			sourceTree = "<group>";
+		};
+		023315D31DAE45F70023E8BF /* CarouselAds */ = {
+			isa = PBXGroup;
+			children = (
+				023315D41DAE45F70023E8BF /* CarouselAdsView.swift */,
+				023315D51DAE45F70023E8BF /* CarouselAdsView.xib */,
+				023315D61DAE45F70023E8BF /* CrsAdsCell.swift */,
+				023315D71DAE45F70023E8BF /* CrsAdsCell.xib */,
+			);
+			path = CarouselAds;
+			sourceTree = "<group>";
+		};
+		023315D81DAE45F70023E8BF /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				023315D91DAE45F70023E8BF /* RecommedHeaderView.swift */,
+				023315DA1DAE45F70023E8BF /* RecommedHeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		023315DB1DAE45F70023E8BF /* ItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				023315DC1DAE45F70023E8BF /* RecommedBaseViewCell.swift */,
+				023315DD1DAE45F70023E8BF /* RecommedNormalCell.swift */,
+				023315DE1DAE45F70023E8BF /* RecommedNormalCell.xib */,
+				023315DF1DAE45F70023E8BF /* RecommedPrettyCell.swift */,
+				023315E01DAE45F70023E8BF /* RecommedPrettyCell.xib */,
+			);
+			path = ItemCell;
+			sourceTree = "<group>";
+		};
+		023315E11DAE45F70023E8BF /* RmdGameView */ = {
+			isa = PBXGroup;
+			children = (
+				023315E21DAE45F70023E8BF /* RmdGameCell.swift */,
+				023315E31DAE45F70023E8BF /* RmdGameCell.xib */,
+				023315E41DAE45F70023E8BF /* RmdGameView.swift */,
+				023315E51DAE45F70023E8BF /* RmdGameView.xib */,
+			);
+			path = RmdGameView;
+			sourceTree = "<group>";
+		};
+		023315F91DAE47CA0023E8BF /* 游戏界面相关模型 */ = {
+			isa = PBXGroup;
+			children = (
+				023315FA1DAE47D80023E8BF /* GameMode.swift */,
+			);
+			path = "游戏界面相关模型";
+			sourceTree = "<group>";
+		};
 		0236644A1DA77D0500CEA6EC /* Toolbox */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,49 +199,6 @@
 				0236644C1DA77D3400CEA6EC /* NetWorkTools.swift */,
 			);
 			path = NetWorkTools;
-			sourceTree = "<group>";
-		};
-		0257EC0B1DAA27380050D541 /* ItemCell */ = {
-			isa = PBXGroup;
-			children = (
-				0257EC191DAA34850050D541 /* RecommedBaseViewCell.swift */,
-				0257EC0C1DAA27380050D541 /* RecommedNormalCell.swift */,
-				0257EC0D1DAA27380050D541 /* RecommedNormalCell.xib */,
-				0257EC0E1DAA27380050D541 /* RecommedPrettyCell.swift */,
-				0257EC0F1DAA27380050D541 /* RecommedPrettyCell.xib */,
-			);
-			path = ItemCell;
-			sourceTree = "<group>";
-		};
-		0257EC101DAA27380050D541 /* HeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				0257EC111DAA27380050D541 /* RecommedHeaderView.swift */,
-				0257EC121DAA27380050D541 /* RecommedHeaderView.xib */,
-			);
-			path = HeaderView;
-			sourceTree = "<group>";
-		};
-		0257EC1B1DAA3FD10050D541 /* CarouselAds */ = {
-			isa = PBXGroup;
-			children = (
-				0257EC1D1DAA40120050D541 /* CarouselAdsView.swift */,
-				0257EC1F1DAA40270050D541 /* CarouselAdsView.xib */,
-				0257EC231DAA47CE0050D541 /* CrsAdsCell.swift */,
-				0257EC251DAA47DC0050D541 /* CrsAdsCell.xib */,
-			);
-			path = CarouselAds;
-			sourceTree = "<group>";
-		};
-		0257EC1C1DAA3FDF0050D541 /* RmdGameView */ = {
-			isa = PBXGroup;
-			children = (
-				02FEA0571DAA5FA600D33EF7 /* RmdGameView.swift */,
-				02FEA05B1DAA5FCD00D33EF7 /* RmdGameView.xib */,
-				02FEA05D1DAA64F500D33EF7 /* RmdGameCell.swift */,
-				02FEA05E1DAA64F500D33EF7 /* RmdGameCell.xib */,
-			);
-			path = RmdGameView;
 			sourceTree = "<group>";
 		};
 		0257EC291DAA4F360050D541 /* 推荐界面相关模型 */ = {
@@ -259,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				02C7BD4E1DA64B9F003D2350 /* RecommedViewController.swift */,
+				023315CF1DAE3F9E0023E8BF /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				0257EC291DAA4F360050D541 /* 推荐界面相关模型 */,
+				023315F91DAE47CA0023E8BF /* 游戏界面相关模型 */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,10 +314,8 @@
 		02C7BD521DA64B9F003D2350 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0257EC1B1DAA3FD10050D541 /* CarouselAds */,
-				0257EC1C1DAA3FDF0050D541 /* RmdGameView */,
-				0257EC101DAA27380050D541 /* HeaderView */,
-				0257EC0B1DAA27380050D541 /* ItemCell */,
+				023315D11DAE45F70023E8BF /* GameView */,
+				023315D21DAE45F70023E8BF /* RecommendView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				02C7BD5A1DA64B9F003D2350 /* RecommedViewMode.swift */,
+				023315FC1DAE4A0A0023E8BF /* GameViewMode.swift */,
 			);
 			path = ViewMode;
 			sourceTree = "<group>";
@@ -423,19 +462,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C7BD3E1DA64B5D003D2350 /* LaunchScreen.storyboard in Resources */,
-				0257EC181DAA27380050D541 /* RecommedHeaderView.xib in Resources */,
-				02FEA05C1DAA5FCD00D33EF7 /* RmdGameView.xib in Resources */,
-				0257EC201DAA40270050D541 /* CarouselAdsView.xib in Resources */,
-				0257EC261DAA47DC0050D541 /* CrsAdsCell.xib in Resources */,
 				02C7BD781DA64B9F003D2350 /* Profile.storyboard in Resources */,
+				023315F41DAE45F70023E8BF /* RmdGameView.xib in Resources */,
+				023315EE1DAE45F70023E8BF /* RecommedNormalCell.xib in Resources */,
+				023315EB1DAE45F70023E8BF /* RecommedHeaderView.xib in Resources */,
 				02C7BD761DA64B9F003D2350 /* Main.storyboard in Resources */,
-				0257EC161DAA27380050D541 /* RecommedPrettyCell.xib in Resources */,
+				023315F21DAE45F70023E8BF /* RmdGameCell.xib in Resources */,
 				02C7BD6C1DA64B9F003D2350 /* Home.storyboard in Resources */,
-				02FEA0601DAA64F500D33EF7 /* RmdGameCell.xib in Resources */,
+				023315F01DAE45F70023E8BF /* RecommedPrettyCell.xib in Resources */,
+				023315E71DAE45F70023E8BF /* CarouselAdsView.xib in Resources */,
 				02C7BD751DA64B9F003D2350 /* Live.storyboard in Resources */,
 				02C7BD3B1DA64B5D003D2350 /* Assets.xcassets in Resources */,
 				02C7BD6A1DA64B9F003D2350 /* Follow.storyboard in Resources */,
-				0257EC141DAA27380050D541 /* RecommedNormalCell.xib in Resources */,
+				023315F81DAE461D0023E8BF /* GameCollectionCell.xib in Resources */,
+				023315E91DAE45F70023E8BF /* CrsAdsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,26 +537,30 @@
 				02C7BD6B1DA64B9F003D2350 /* RecommedViewController.swift in Sources */,
 				02C7BD691DA64B9F003D2350 /* PageTitleView.swift in Sources */,
 				02C7BD681DA64B9F003D2350 /* PageContentView.swift in Sources */,
+				023315EC1DAE45F70023E8BF /* RecommedBaseViewCell.swift in Sources */,
+				023315F31DAE45F70023E8BF /* RmdGameView.swift in Sources */,
+				023315FD1DAE4A0A0023E8BF /* GameViewMode.swift in Sources */,
+				023315E81DAE45F70023E8BF /* CrsAdsCell.swift in Sources */,
 				0257EC2D1DAA4F360050D541 /* CsrAdsMode.swift in Sources */,
-				0257EC1E1DAA40120050D541 /* CarouselAdsView.swift in Sources */,
-				0257EC131DAA27380050D541 /* RecommedNormalCell.swift in Sources */,
-				0257EC241DAA47CE0050D541 /* CrsAdsCell.swift in Sources */,
+				023315F11DAE45F70023E8BF /* RmdGameCell.swift in Sources */,
+				023315D01DAE3F9E0023E8BF /* GameViewController.swift in Sources */,
 				0236644D1DA77D3400CEA6EC /* NetWorkTools.swift in Sources */,
-				02FEA05F1DAA64F500D33EF7 /* RmdGameCell.swift in Sources */,
-				02FEA0581DAA5FA600D33EF7 /* RmdGameView.swift in Sources */,
-				0257EC1A1DAA34850050D541 /* RecommedBaseViewCell.swift in Sources */,
 				02C7BD7B1DA64B9F003D2350 /* UIColor+Extension.swift in Sources */,
 				02C7BD741DA64B9F003D2350 /* RecommedViewMode.swift in Sources */,
 				0257EC2E1DAA4F360050D541 /* RecommedGroupMode.swift in Sources */,
 				02C93AB41DA7B5C8006B8873 /* NSDate+Extension.swift in Sources */,
 				02C7BD791DA64B9F003D2350 /* GlobalConfig.swift in Sources */,
+				023315ED1DAE45F70023E8BF /* RecommedNormalCell.swift in Sources */,
 				0257EC2F1DAA4F360050D541 /* RecommedItemMode.swift in Sources */,
 				02C7BD771DA64B9F003D2350 /* MainTabBarVC.swift in Sources */,
-				0257EC151DAA27380050D541 /* RecommedPrettyCell.swift in Sources */,
+				023315FB1DAE47D80023E8BF /* GameMode.swift in Sources */,
+				023315E61DAE45F70023E8BF /* CarouselAdsView.swift in Sources */,
+				023315F71DAE461D0023E8BF /* GameCollectionCell.swift in Sources */,
 				02C7BD341DA64B5D003D2350 /* AppDelegate.swift in Sources */,
 				02C7BD6D1DA64B9F003D2350 /* HomeViewController.swift in Sources */,
 				02C7BD7A1DA64B9F003D2350 /* UIBarButtonItem+Extension.swift in Sources */,
-				0257EC171DAA27380050D541 /* RecommedHeaderView.swift in Sources */,
+				023315EF1DAE45F70023E8BF /* RecommedPrettyCell.swift in Sources */,
+				023315EA1DAE45F70023E8BF /* RecommedHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +596,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -601,6 +646,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -629,6 +675,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 024DEF907E07CE827810FF59 /* Pods-DY-swift.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "DY-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -642,6 +689,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FF7425A2710411FEAFBFA96D /* Pods-DY-swift.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "DY-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

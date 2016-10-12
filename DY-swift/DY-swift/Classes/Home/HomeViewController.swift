@@ -47,9 +47,9 @@ class HomeViewController: UIViewController {
         // 确定子控制器
         var chilidVCs:[UIViewController] = [UIViewController]()
         let recommedVC = RecommedViewController()
-        recommedVC.view.frame = CGRect(x: 0, y: 0, width: pageContentViewW, height: pageContentViewH)
+        let gameVC = GameViewController()
         chilidVCs.append(recommedVC)
-        chilidVCs.append(UIViewController())
+        chilidVCs.append(gameVC)
         chilidVCs.append(UIViewController())
         chilidVCs.append(UIViewController())
         

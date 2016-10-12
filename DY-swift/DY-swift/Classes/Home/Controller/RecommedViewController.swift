@@ -10,33 +10,33 @@ import UIKit
 
 // 常量属性
 ///>>>>>>>>>>>>>>----------collectView相关
-let kMinLineSpacing:CGFloat = 0.0    //collectView最小行距
-let kMinItemSpacing:CGFloat = 10.0   //collectView中Cell最小间隔
+fileprivate let kMinLineSpacing:CGFloat = 0.0    //collectView最小行距
+fileprivate let kMinItemSpacing:CGFloat = 10.0   //collectView中Cell最小间隔
 
-let KItemNoramlCellW:CGFloat = (kScreenW - kMinItemSpacing * 3) * 0.5
+fileprivate let KItemNoramlCellW:CGFloat = (kScreenW - kMinItemSpacing * 3) * 0.5
                                                         //collectView中普通Cell宽度
-let kItemNoramlCellH:CGFloat = KItemNoramlCellW * 3 / 4
+fileprivate let kItemNoramlCellH:CGFloat = KItemNoramlCellW * 3 / 4
                                                         //collectView中普通Cell宽度
-let KItemPrettyCellW:CGFloat = KItemNoramlCellW
+fileprivate let KItemPrettyCellW:CGFloat = KItemNoramlCellW
                                                         //collectView中颜值Cell宽度
-let kItemPrettyCellH:CGFloat = KItemNoramlCellW * 4 / 3
+fileprivate let kItemPrettyCellH:CGFloat = KItemNoramlCellW * 4 / 3
                                                         //collectView中颜值Cell高度
 
-let kItemHeaderH:CGFloat = 60.0                         //collectView中Header高度
+fileprivate let kItemHeaderH:CGFloat = 60.0                         //collectView中Header高度
 
-let kRmdHeaderCellNibName = "RecommedHeaderView"   //collectVeiw中header的nib名称
-let kRmdNormalCellNibName = "RecommedNormalCell"   //collectVeiw中普通Cell的nib名称
-let kRmdPrettyCellNibName = "RecommedPrettyCell"   //collectVeiw中颜值Cell的nib名称
+fileprivate let kRmdHeaderCellNibName = "RecommedHeaderView"   //collectVeiw中header的nib名称
+fileprivate let kRmdNormalCellNibName = "RecommedNormalCell"   //collectVeiw中普通Cell的nib名称
+fileprivate let kRmdPrettyCellNibName = "RecommedPrettyCell"   //collectVeiw中颜值Cell的nib名称
 
-let kRmdHeaderCellIdentifer = "kRmdHeaderCellId"  //collectVeiw中header的identifier
-let kRmdNormalCellIdentifer = "kRmdNormalCellId"  //collectVeiw中普通Cell的identifier
-let kRmdPrettyCellIdentifer = "kRmdPrettyCellId"  //collectVeiw中颜值Cell的identifier
+fileprivate let kRmdHeaderCellIdentifer = "kRmdHeaderCellId"  //collectVeiw中header的identifier
+fileprivate let kRmdNormalCellIdentifer = "kRmdNormalCellId"  //collectVeiw中普通Cell的identifier
+fileprivate let kRmdPrettyCellIdentifer = "kRmdPrettyCellId"  //collectVeiw中颜值Cell的identifier
 
 ///>>>>>>>>>>>>>>----------CarouselAdsView广告控件相关
-let kRmdCrsAdsViewH:CGFloat = kScreenW * 3/8
+fileprivate let kRmdCrsAdsViewH:CGFloat = kScreenW * 3/8
 
 ///>>>>>>>>>>>>>>----------RmdGameView推荐游戏控件相关
-let kRmdGameViewH:CGFloat = 85
+fileprivate let kRmdGameViewH:CGFloat = 85
 
 
 

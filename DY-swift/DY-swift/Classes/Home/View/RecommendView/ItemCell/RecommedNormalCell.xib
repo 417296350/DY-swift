@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kRmdNormalCellId" id="gTV-IL-0wX" customClass="RecommedNormalCell" customModule="DY_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-zh-9ck">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="7ky-Tx-urr"/>
+                            <constraint firstAttribute="height" constant="14" id="ifa-SX-iEO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房间名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS8-n7-ILs">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="w85-9F-uRi"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG4-6I-Vqm">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRf-Zo-ofx">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="在线人数" image="Image_online">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="w85-9F-uRi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3Kk-L5-Qml"/>
+                <constraint firstAttribute="trailing" secondItem="w85-9F-uRi" secondAttribute="trailing" id="4qa-N1-v8J"/>
+                <constraint firstItem="kRf-Zo-ofx" firstAttribute="bottom" secondItem="w85-9F-uRi" secondAttribute="bottom" constant="-5" id="5dp-bh-fyN"/>
+                <constraint firstItem="RS8-n7-ILs" firstAttribute="leading" secondItem="BcZ-zh-9ck" secondAttribute="trailing" constant="5" id="HQr-Ce-mun"/>
+                <constraint firstItem="RS8-n7-ILs" firstAttribute="top" secondItem="w85-9F-uRi" secondAttribute="bottom" constant="5" id="PVO-kD-QbP"/>
+                <constraint firstItem="kRf-Zo-ofx" firstAttribute="trailing" secondItem="w85-9F-uRi" secondAttribute="trailing" constant="-5" id="Phs-AM-Eud"/>
+                <constraint firstAttribute="bottom" secondItem="BcZ-zh-9ck" secondAttribute="bottom" constant="15" id="QIo-0w-QFt"/>
+                <constraint firstItem="BcZ-zh-9ck" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="XGg-6O-at4"/>
+                <constraint firstItem="w85-9F-uRi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="brg-KV-rNC"/>
+                <constraint firstItem="aG4-6I-Vqm" firstAttribute="bottom" secondItem="w85-9F-uRi" secondAttribute="bottom" constant="-5" id="eqr-5x-d5k"/>
+                <constraint firstItem="aG4-6I-Vqm" firstAttribute="leading" secondItem="w85-9F-uRi" secondAttribute="leading" constant="10" id="gII-lm-oig"/>
+                <constraint firstItem="BcZ-zh-9ck" firstAttribute="centerY" secondItem="RS8-n7-ILs" secondAttribute="centerY" id="mAA-bU-Z4v"/>
+            </constraints>
+            <size key="customSize" width="240" height="190"/>
+            <connections>
+                <outlet property="anchorNameLabel" destination="aG4-6I-Vqm" id="Blx-qb-HQ5"/>
+                <outlet property="onlinePNumButton" destination="kRf-Zo-ofx" id="VWg-EA-l0z"/>
+                <outlet property="roomBackgroudImageView" destination="w85-9F-uRi" id="Xzk-9u-6yH"/>
+                <outlet property="roomNameLabel" destination="RS8-n7-ILs" id="Rt8-2y-PrS"/>
+            </connections>
+            <point key="canvasLocation" x="-31" y="31"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image_online" width="16" height="16"/>
+        <image name="home_live_cate_normal" width="14" height="14"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
+</document>
