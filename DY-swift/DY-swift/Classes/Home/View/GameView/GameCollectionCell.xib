@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gameCellId" id="M5b-hx-lW3" customClass="GameCollectionCell" customModule="DY_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="78" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="78" height="96"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dws-Tb-qYN">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="l66-TV-53Z"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_more_btn" translatesAutoresizingMaskIntoConstraints="NO" id="JGS-9B-yZO">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="62" id="Wx4-ni-B2u"/>
+                            <constraint firstAttribute="width" secondItem="JGS-9B-yZO" secondAttribute="height" multiplier="1:1" id="aj6-x2-HbJ"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GK5-Td-Yc3">
+                        <color key="backgroundColor" red="0.75991586538461542" green="0.75991586538461542" blue="0.75991586538461542" alpha="0.68472521551724141" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="Wb4-vk-rjq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="JGS-9B-yZO" firstAttribute="centerX" secondItem="M5b-hx-lW3" secondAttribute="centerX" id="6VF-ue-6CC"/>
+                <constraint firstItem="dws-Tb-qYN" firstAttribute="leading" secondItem="M5b-hx-lW3" secondAttribute="leading" id="AYV-AP-VP7"/>
+                <constraint firstItem="dws-Tb-qYN" firstAttribute="top" secondItem="JGS-9B-yZO" secondAttribute="bottom" constant="5" id="TxR-Zf-ohE"/>
+                <constraint firstAttribute="trailing" secondItem="GK5-Td-Yc3" secondAttribute="trailing" id="a0s-zH-cu1"/>
+                <constraint firstItem="GK5-Td-Yc3" firstAttribute="leading" secondItem="M5b-hx-lW3" secondAttribute="leading" id="e0L-cf-cVH"/>
+                <constraint firstAttribute="bottom" secondItem="GK5-Td-Yc3" secondAttribute="bottom" constant="1" id="iFz-er-CEg"/>
+                <constraint firstAttribute="trailing" secondItem="dws-Tb-qYN" secondAttribute="trailing" id="tB8-hd-6ky"/>
+                <constraint firstItem="JGS-9B-yZO" firstAttribute="centerY" secondItem="M5b-hx-lW3" secondAttribute="centerY" constant="-15" id="tMj-k5-Tfd"/>
+                <constraint firstItem="JGS-9B-yZO" firstAttribute="centerX" secondItem="M5b-hx-lW3" secondAttribute="centerX" id="ut8-iN-Gef"/>
+            </constraints>
+            <size key="customSize" width="109" height="95"/>
+            <connections>
+                <outlet property="gameIcon" destination="JGS-9B-yZO" id="Kmc-i3-8ek"/>
+                <outlet property="gameTitle" destination="dws-Tb-qYN" id="J20-Ed-KkK"/>
+            </connections>
+            <point key="canvasLocation" x="63" y="76"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_more_btn" width="44" height="44"/>
+    </resources>
+</document>
