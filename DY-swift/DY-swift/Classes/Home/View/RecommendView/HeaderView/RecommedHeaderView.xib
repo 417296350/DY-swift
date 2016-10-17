@@ -15,7 +15,7 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_phone" translatesAutoresizingMaskIntoConstraints="NO" id="Tdy-y4-JHC" userLabel="IconImageView">
                     <constraints>
-                        <constraint firstAttribute="height" constant="18" id="RVQ-au-Dwc"/>
+                        <constraint firstAttribute="height" constant="18" id="QX0-nA-BER"/>
                         <constraint firstAttribute="width" secondItem="Tdy-y4-JHC" secondAttribute="height" multiplier="1:1" id="o3z-xz-8qW"/>
                     </constraints>
                 </imageView>

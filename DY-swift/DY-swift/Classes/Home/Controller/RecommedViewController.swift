@@ -9,29 +9,6 @@
 import UIKit
 
 // 常量属性
-///>>>>>>>>>>>>>>----------collectView相关
-fileprivate let kMinLineSpacing:CGFloat = 0.0    //collectView最小行距
-fileprivate let kMinItemSpacing:CGFloat = 10.0   //collectView中Cell最小间隔
-
-fileprivate let KItemNoramlCellW:CGFloat = (kScreenW - kMinItemSpacing * 3) * 0.5
-                                                        //collectView中普通Cell宽度
-fileprivate let kItemNoramlCellH:CGFloat = KItemNoramlCellW * 3 / 4
-                                                        //collectView中普通Cell宽度
-fileprivate let KItemPrettyCellW:CGFloat = KItemNoramlCellW
-                                                        //collectView中颜值Cell宽度
-fileprivate let kItemPrettyCellH:CGFloat = KItemNoramlCellW * 4 / 3
-                                                        //collectView中颜值Cell高度
-
-fileprivate let kItemHeaderH:CGFloat = 60.0                         //collectView中Header高度
-
-fileprivate let kRmdHeaderCellNibName = "RecommedHeaderView"   //collectVeiw中header的nib名称
-fileprivate let kRmdNormalCellNibName = "RecommedNormalCell"   //collectVeiw中普通Cell的nib名称
-fileprivate let kRmdPrettyCellNibName = "RecommedPrettyCell"   //collectVeiw中颜值Cell的nib名称
-
-fileprivate let kRmdHeaderCellIdentifer = "kRmdHeaderCellId"  //collectVeiw中header的identifier
-fileprivate let kRmdNormalCellIdentifer = "kRmdNormalCellId"  //collectVeiw中普通Cell的identifier
-fileprivate let kRmdPrettyCellIdentifer = "kRmdPrettyCellId"  //collectVeiw中颜值Cell的identifier
-
 ///>>>>>>>>>>>>>>----------CarouselAdsView广告控件相关
 fileprivate let kRmdCrsAdsViewH:CGFloat = kScreenW * 3/8
 
@@ -40,52 +17,9 @@ fileprivate let kRmdGameViewH:CGFloat = 85
 
 
 
-class RecommedViewController: UIViewController {
+class RecommedViewController: HomeBaseViewController {
 
     // MARK: 懒加载
-    fileprivate lazy var rmdCollectionView:UICollectionView = {//创建collectView
-        
-        [weak self] in
-        
-        // 0. 统一确定cell、header大小
-        
-        let itemHeaderW:CGFloat = kScreenW
-    
-        // 1. 创建、设置layout
-        let collectionLayout = UICollectionViewFlowLayout()
-        collectionLayout.minimumLineSpacing = kMinLineSpacing
-        collectionLayout.minimumInteritemSpacing = kMinItemSpacing
-        collectionLayout.sectionInset = UIEdgeInsetsMake(0, kMinItemSpacing, 0, kMinItemSpacing)
-        collectionLayout.itemSize = CGSize(width:KItemNoramlCellW , height: kItemNoramlCellH)
-        collectionLayout.headerReferenceSize = CGSize(width: itemHeaderW, height: kItemHeaderH)
-        collectionLayout.scrollDirection = UICollectionViewScrollDirection.vertical
-        
-        // 2. 创建、设置collection
-        let collectionView:UICollectionView = UICollectionView(frame: (self?.view.bounds)!, collectionViewLayout: collectionLayout)
-        collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        collectionView.backgroundColor = UIColor.white
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
-        // 2.x 设置collecttion内边距，让处于Y负值的控件内容显示出来
-        collectionView.contentInset = UIEdgeInsets(top: kRmdCrsAdsViewH+kRmdGameViewH, left: 0, bottom: 0, right: 0)
-        
-        
-        // 3. 注册header
-        let headerNib = UINib(nibName: kRmdHeaderCellNibName, bundle: nil)
-        collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kRmdHeaderCellIdentifer)
-        
-        // 4. 注册cell  (普通cell  和  颜值cell)
-        let normalCell = UINib(nibName: kRmdNormalCellNibName, bundle: nil)
-        let prettyCell = UINib(nibName: kRmdPrettyCellNibName, bundle: nil)
-        collectionView.register(normalCell, forCellWithReuseIdentifier: kRmdNormalCellIdentifer)
-        collectionView.register(prettyCell, forCellWithReuseIdentifier: kRmdPrettyCellIdentifer)
-        
-        // 5. 返回collectView
-        return collectionView
-        
-    }()
-    
     fileprivate lazy var rmdCrsAdsView:CarouselAdsView = {// 广告控件
     
         let rmdCrsAdsView = CarouselAdsView.carouselAdsViewFromNib()
@@ -106,10 +40,9 @@ class RecommedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 初始化UI
-        setupUI()
+        // 1.初始化UI(父类调用了setupUI)
         
-        // 网络请求
+        // 2.网络请求
         requsetData()
     }
 }
@@ -118,10 +51,10 @@ class RecommedViewController: UIViewController {
 //MARK: 初始化
 extension RecommedViewController{
 
-    fileprivate func setupUI(){
+    internal override func setupUI(){
         
-        // 1.添加UICollectionView
-        view.addSubview(rmdCollectionView)
+        // 1.先调用super.setupUI,保证执行能调用父类的setupUI进行collectView的初始化
+        super.setupUI()
         
         // 2.添加轮播广告 [根据需求是需要添加到collectView上，而不是view上]
         rmdCollectionView.addSubview(rmdCrsAdsView)
@@ -129,6 +62,8 @@ extension RecommedViewController{
         // 3.添加游戏推荐 [根据需求是需要添加到collectView上，而不是view上]
         rmdCollectionView.addSubview(rmdGameView)
         
+        // 4.设置collectView的内边距
+        rmdCollectionView.contentInset = UIEdgeInsetsMake(+kRmdCrsAdsViewH + kRmdGameViewH, 0, 0, 0)
     }
 }
 
@@ -153,11 +88,11 @@ extension RecommedViewController{
             
             if isSuccess{
                 
-                // 2.1 把请求到的数据传递给游戏推荐控件
-                self?.rmdGameView.rmdGroupModes = self?.rmdViewMode.rmdAllGroupModes
+                //  2.1 把请求到的数据传递给父控件
+                self?.rmdModes = (self?.rmdViewMode.rmdAllGroupModes)!
                 
-                // 2.2 刷新推荐人的collectView控件
-                self?.rmdCollectionView.reloadData()
+                //  2.2 给游戏推荐传递数据
+                self?.rmdGameView.rmdGroupModes = self?.rmdViewMode.rmdAllGroupModes
                 
             }else{
                 print("requsetRecommedData():获取推荐界面数据失败")
@@ -168,69 +103,32 @@ extension RecommedViewController{
     
 }
 
-//MARK: 遵守UICollectionViewDataSource数据源方法
-extension RecommedViewController:UICollectionViewDataSource{
 
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return rmdViewMode.rmdAllGroupModes.count
-    }
 
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let rmdGroupMode:RecommedGroupMode = rmdViewMode.rmdAllGroupModes[section]
-        return (rmdGroupMode.itemModes.count)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//MARK: 重写父类遵守过的UICollectionViewDataSource数据源部分方法
+// 因为父类已经遵守了UICollectionViewDataSource协议，所以子类扩展后面不需要在遵守
+extension RecommedViewController{
+
+    // 重写这个方法，是为了单独处理一下颜值Cell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // 0. 定义reusableView
-        let reusableView:UICollectionReusableView
-        
-        // 1. 如果是头部header
-        if kind == UICollectionElementKindSectionHeader {
+        if indexPath.section == 1{//如果第一组的颜值cell，则自己处理
             
-            // 1.1 获取头部headerCell
-            reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kRmdHeaderCellIdentifer, for: indexPath)
+            let prettyCell = collectionView.dequeueReusableCell(withReuseIdentifier: kRmdPrettyCellIdentifer, for: indexPath) as! RecommedPrettyCell
+            let rmdGroupMode:RecommedGroupMode = rmdModes[indexPath.section]
+            prettyCell.rmdItemMode = rmdGroupMode.itemModes[indexPath.row]
+            return prettyCell
             
-            // 1.2 校验view类型是否为RecommedHeaderView
-            guard  let headView:RecommedHeaderView = reusableView as? RecommedHeaderView else { return reusableView }
-            
-            // 1.3 传入头部数据
-            headView.rmdGroupMode = self.rmdViewMode.rmdAllGroupModes[indexPath.section]
-            
-        }else{
-            reusableView = UICollectionReusableView()
+        }else{//否则皆为普通cell，可统一由父类创建处理
+            return super.collectionView(collectionView, cellForItemAt: indexPath)
         }
-        
-        // 2. 返回reusableView
-        return reusableView
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        // 0. 定义cell
-        var cell:RecommedBaseViewCell
-        
-        // 1. 获取cell
-        if indexPath.section == 1 {//0组显示颜值cell
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kRmdPrettyCellIdentifer, for: indexPath) as! RecommedPrettyCell
-        }else{//非1组显示普通cell
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kRmdNormalCellIdentifer, for: indexPath) as! RecommedNormalCell
-        }
-        
-        // 2. 传入数据
-        let rmdGroupMode:RecommedGroupMode = rmdViewMode.rmdAllGroupModes[indexPath.section]
-        cell.rmdItemMode = rmdGroupMode.itemModes[indexPath.row]
-        
-        // 3. 返回cell
-        return cell
-        
     }
 }
 
 //MARK: 遵守UICollectionViewDelegateFlowLayout布局的代理方法
 extension RecommedViewController:UICollectionViewDelegateFlowLayout{
     
+    // 为了单独处理颜值cell 和 普通cell 的大小
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {//可随意指定CELL的大小
         
         // 1. 初始化size属性
@@ -248,3 +146,4 @@ extension RecommedViewController:UICollectionViewDelegateFlowLayout{
     }
     
 }
+

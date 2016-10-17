@@ -35,6 +35,14 @@ class RecommedHeaderView: UICollectionReusableView {
     
 }
 
+//MARK: 快速创建对象方法
+extension RecommedHeaderView{
+
+    class func recommedHeaderViewFromNib()->RecommedHeaderView{
+        return Bundle.main.loadNibNamed("RecommedHeaderView", owner: nil, options: nil)?.first as! RecommedHeaderView
+    }
+}
+
 
 //MARK: 给控件传入数据
 extension RecommedHeaderView{

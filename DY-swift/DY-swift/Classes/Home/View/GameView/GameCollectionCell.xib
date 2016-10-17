@@ -29,6 +29,12 @@
                             <constraint firstAttribute="width" constant="62" id="Wx4-ni-B2u"/>
                             <constraint firstAttribute="width" secondItem="JGS-9B-yZO" secondAttribute="height" multiplier="1:1" id="aj6-x2-HbJ"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="31"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GK5-Td-Yc3">
                         <color key="backgroundColor" red="0.75991586538461542" green="0.75991586538461542" blue="0.75991586538461542" alpha="0.68472521551724141" colorSpace="calibratedRGB"/>

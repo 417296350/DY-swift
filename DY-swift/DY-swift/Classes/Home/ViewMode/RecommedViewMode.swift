@@ -238,17 +238,13 @@ extension RecommedViewMode{
                 return
             }
             
-            // 3. 设置热门中组模型的数据(斗鱼针对热门部分没有返回组模型数据，但UI确需要，比如头部标题、头部内容图片等，所以既然斗鱼没有返回此数据，就在本地设置热门部分对应的组模型数据)
-            self.rmdVerticaGroupMode.tag_name = "颜值"
-            self.rmdVerticaGroupMode.icon_name = "home_header_phone"
-            
-            // 4. 遍历数组,添加itemMode到组模型的数组属性中
+            // 3. 遍历数组,添加itemMode到组模型的数组属性中
             for value in rmdDataArr{
                 let rmdBigMode = RecommedGroupMode(dict: value)
                 self.rmdHotCateModes.append(rmdBigMode)
             }
             
-            // 5. 移除组队列(告诉系统这个异步线程结束，这样系统执行dispatch_notfi才明白)
+            // 4. 移除组队列(告诉系统这个异步线程结束，这样系统执行dispatch_notfi才明白)
             self.isRequstHotCateSuccess = true
             if group != nil {
                 group!.leave()

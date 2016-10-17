@@ -9,6 +9,9 @@
 import UIKit
 
 //MARK: >>>>>>>>>常量属性定义
+fileprivate let kTopTitleheaderViewH:CGFloat = 30
+fileprivate let kTopRmdeheaderViewH:CGFloat = 90
+
 fileprivate let kEdegMargin:CGFloat = 10.0
 fileprivate let kGameCellW:CGFloat = (kScreenW - 2 * kEdegMargin) / 3
 fileprivate let kGameCellH:CGFloat = kGameCellW * 6/5
@@ -38,6 +41,7 @@ class GameViewController: UIViewController {
         // 2. 创建UICollectionView 且 设置属性
         let collectionView = UICollectionView(frame:(self?.view.bounds)! , collectionViewLayout: layout)
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        collectionView.contentInset = UIEdgeInsetsMake(kTopTitleheaderViewH+kTopRmdeheaderViewH, 0, 0, 0)
         collectionView.backgroundColor = UIColor.white
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -52,6 +56,27 @@ class GameViewController: UIViewController {
         return collectionView
         
     }()
+    
+    fileprivate lazy var topTitleHeaderView:RecommedHeaderView = {//头部标题View
+        
+        let titleHeader = RecommedHeaderView.recommedHeaderViewFromNib()
+        titleHeader.frame = CGRect(x: 0, y: -kTopTitleheaderViewH-kTopRmdeheaderViewH, width: kScreenW, height: kTopTitleheaderViewH)
+        titleHeader.titleLabel.text = "常用"
+        titleHeader.iconImageView.image = UIImage(named: "Img_orange")
+        titleHeader.moreBtn.isHidden = true
+
+        return titleHeader
+        
+    }()
+    
+    fileprivate lazy var topRmdHeaderVeiw:RmdGameView = {//头部推荐View
+    
+        let rmdHeader = RmdGameView.rmdGameViewFromNib()
+        rmdHeader.frame = CGRect(x: 0, y: -kTopRmdeheaderViewH, width: kScreenW, height: kTopRmdeheaderViewH)
+        return rmdHeader
+        
+    }()
+    
     
     fileprivate lazy var gameViewMode:GameViewMode = {
     
@@ -79,6 +104,12 @@ extension GameViewController{
     
         // 添加UICollectionView
         view.addSubview(gameCollectionView)
+        
+        // 添加topTitleHeaderView
+        gameCollectionView.addSubview(topTitleHeaderView)
+        
+        // 添加topRmdHeaderView
+        gameCollectionView.addSubview(topRmdHeaderVeiw)
     }
     
 }
@@ -93,6 +124,12 @@ extension GameViewController{
         gameViewMode.getData { (isSuccess) in
             
             if isSuccess{
+                
+                // 1. 先给头部推荐View传递数据
+                self.topRmdHeaderVeiw.rmdGameModes = Array(self.gameViewMode.gameModes[0...10])
+            
+                
+                // 2. 刷新当前游戏collectView
                 self.gameCollectionView.reloadData()
             }
         }

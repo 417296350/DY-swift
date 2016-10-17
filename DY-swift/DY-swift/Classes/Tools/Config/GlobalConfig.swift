@@ -9,8 +9,8 @@
 import UIKit
 
 // MARK: 全局可使用的常量属性
-let kScreenW = UIScreen.main.bounds.width        //屏幕宽度
-let kScreenH = UIScreen.main.bounds.height       //屏幕高度
+let kScreenW:CGFloat = UIScreen.main.bounds.width        //屏幕宽度
+let kScreenH:CGFloat = UIScreen.main.bounds.height       //屏幕高度
 
 let kStateBarH:CGFloat = 20.0                    //状态栏高度
 let kNavagationBarH:CGFloat = 44.0               //导航栏高度
@@ -24,4 +24,4 @@ let nDouYubigDataRoom = "api/v1/getbigDataRoom"         //斗鱼热门推荐数�
 let nDouYuVerticalRoom = "api/v1/getVerticalRoom"       //斗鱼颜值推荐数据
 let nDouYuHotCate = "api/v1/getHotCate"                 //斗鱼热门游戏推荐数据
 let nDouYuCrsAds = "api/v1/slide/6"                     //斗鱼推荐广告轮播数据
-
+let nDouYuAmuse = "api/v1/getHotRoom/2"                 //斗鱼娱乐界面数据

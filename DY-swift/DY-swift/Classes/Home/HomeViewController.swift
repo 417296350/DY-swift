@@ -38,19 +38,15 @@ class HomeViewController: UIViewController {
         [weak self] in
         
         // 确定Frame
-        let pageContentViewX:CGFloat = 0
-        let pageContentViewY:CGFloat = (self?.pageTitleView.frame.maxY)!
-        let pageContentViewW:CGFloat = (self?.view.bounds.size.width)!
-        let pageContentViewH:CGFloat = kScreenH - pageContentViewY - kTabBarH - 5
-        let pageContentViewF:CGRect = CGRect(x: pageContentViewX, y: pageContentViewY, width: pageContentViewW, height: pageContentViewH)
+        let pageContentViewY:CGFloat = kStateBarH + kNavagationBarH + kPageTitleViewH
+        let pageContentViewH:CGFloat = kScreenH - kStateBarH - kNavagationBarH - kPageTitleViewH - kTabBarH
+        let pageContentViewF:CGRect = CGRect(x: 0, y: pageContentViewY, width: kScreenW, height: pageContentViewH)
         
         // 确定子控制器
         var chilidVCs:[UIViewController] = [UIViewController]()
-        let recommedVC = RecommedViewController()
-        let gameVC = GameViewController()
-        chilidVCs.append(recommedVC)
-        chilidVCs.append(gameVC)
-        chilidVCs.append(UIViewController())
+        chilidVCs.append(RecommedViewController())
+        chilidVCs.append(GameViewController())
+        chilidVCs.append(AmuseViewController())
         chilidVCs.append(UIViewController())
         
         
@@ -63,11 +59,7 @@ class HomeViewController: UIViewController {
     // MARK: 控制器生命周期
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 1. 不需要控制器自动调整UIScrollview的内边距
-        automaticallyAdjustsScrollViewInsets = false
-        
-        // 2. 初始化UI
+        // 初始化UI
         setupUI()
         
     }
@@ -78,6 +70,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController{
     
     fileprivate func setupUI(){
+        
+        // 不需要控制器自动调整UIScrollview的内边距
+        automaticallyAdjustsScrollViewInsets = false
     
         // 初始化控制器的导航栏
         setupNavgationBar()

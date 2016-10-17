@@ -17,6 +17,7 @@ class RmdGameView: UIView {
     @IBOutlet weak var collectView: UICollectionView!
     
     //MARK: 数据模型属性
+    ////////////////// 推荐组模型
     var rmdGroupModes:[RecommedGroupMode]? {
         
         didSet{
@@ -31,6 +32,16 @@ class RmdGameView: UIView {
             rmdGroupModes?.append(lastGroupMode)
             
             // 3. 刷新collectView
+            collectView.reloadData()
+        }
+    }
+    
+    //MARK: 数据模型属性
+    /////////////////// 推荐游戏模型
+    var rmdGameModes:[GameMode]? {
+        
+        didSet{
+            // 1. 刷新collectView
             collectView.reloadData()
         }
     }
@@ -66,7 +77,7 @@ extension RmdGameView:UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return rmdGroupModes?.count ?? 0
+        return rmdGroupModes?.count ?? rmdGameModes?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -75,8 +86,15 @@ extension RmdGameView:UICollectionViewDataSource{
         let cell = collectView.dequeueReusableCell(withReuseIdentifier: kRmdGameCellId, for: indexPath) as! RmdGameCell
         
         // 2. 传入数据
-        cell.groupMode = rmdGroupModes?[indexPath.row]
+        if rmdGameModes?.count != 0 {
+            cell.groupMode = rmdGroupModes?[indexPath.row]
+        }
         
+        if  rmdGameModes?.count !=  0{
+            cell.gameMode = rmdGameModes?[indexPath.row]
+        }
+        
+
         // 3. 返回cell
         return cell
     }

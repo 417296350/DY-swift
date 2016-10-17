@@ -68,7 +68,7 @@ class CarouselAdsView: UIView {
         super.layoutSubviews()
         
         // 由于xib默认有控件大小，代码设置大小后最外层会随代码改变，所有要拿到最后控件的真正frame，必须在这里
-        layout.itemSize = CGSize(width: kScreenW, height: self.frame.size.height)
+        layout.itemSize = crsAdsCollectionView.bounds.size
     }
     
 }

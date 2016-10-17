@@ -143,7 +143,7 @@ extension PageContentView:UICollectionViewDataSource{
         }
         
         // 3. 设置Cell内容
-//        childVCs[indexPath.row].view.backgroundColor = UIColor.randomColor()
+        childVCs[indexPath.row].view.frame = CGRect(x: 0, y: 0, width: cell.contentView.bounds.width, height: cell.contentView.bounds.height)
         cell.contentView.addSubview(childVCs[indexPath.row].view)
         
         // 4. 返回Cell

@@ -32,6 +32,7 @@ class GameCollectionCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
 
 }
@@ -41,10 +42,7 @@ extension GameCollectionCell{
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        // 设置Icon圆角
-        gameIcon.layer.cornerRadius = gameIcon.frame.size.width * 0.5
-        gameIcon.layer.masksToBounds = true
+
     }
 }
 
